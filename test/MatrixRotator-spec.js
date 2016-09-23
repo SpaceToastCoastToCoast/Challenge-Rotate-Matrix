@@ -5,9 +5,19 @@ var Matrix = require("../Matrix");
 var Direction = require("../Direction").Direction;
 
 describe("The Matrix Rotator", function () {
-  
+
+  /* Matrix we start with
+  [
+    [8,0,1,9,3],
+    [4,5,2,9,7],
+    [3,3,6,9,0],
+    [0,6,8,8,3],
+    [9,0,3,8,7],
+  ];
+  */
+
   var matrixRotator = new MatrixRotator(Matrix.getMatrix1());
-  
+
   it("can rotate Clockwise", function () {
     matrixRotator.rotate(Direction.CW);
     matrixRotator.matrix.should.be.deep.equal( [
@@ -32,4 +42,4 @@ describe("The Matrix Rotator", function () {
                                           ]);
   });
 
-});    
+});
